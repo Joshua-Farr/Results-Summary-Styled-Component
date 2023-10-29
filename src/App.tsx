@@ -1,15 +1,15 @@
+import Results from "./Results";
 import Summary from "./Summary";
 import Button from "./assets/Button";
 import styled from "styled-components";
 
 function App() {
   const SummaryContainer = styled.div`
-    border: 2px solid red;
     max-width: 375px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1em;
+    padding: 2em;
   `;
 
   const Title = styled.h2`
@@ -21,6 +21,7 @@ function App() {
 
   return (
     <SummaryContainer>
+      <Results score={30} />
       <Title>Summary</Title>
       <Summary
         text="Reaction"

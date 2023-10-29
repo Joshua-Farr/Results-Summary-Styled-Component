@@ -35,7 +35,7 @@ const StyledSummary = styled.div`
 `;
 
 const StyledText = styled.h3`
-  font-weight: 500;
+  font-weight: 700;
   margin: 0;
   font-family: "Hanken Grotesk", sans-serif;
   font-size: 1.25rem;
@@ -47,7 +47,7 @@ const StyledScore = styled(StyledText)`
   color: #272d3d;
   font-size: 1rem;
   margin-left: auto;
-  font-weight: 700;
+  font-weight: 800;
 `;
 
 const StyledImg = styled.img``;
