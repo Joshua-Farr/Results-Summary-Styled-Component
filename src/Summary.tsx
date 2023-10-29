@@ -1,49 +1,63 @@
 import styled from "styled-components";
 
 const StyledSummary = styled.div`
-  width: 320px;
+  width: 100%;
   padding: 13px;
   border-radius: 10px;
+  margin-bottom: 1em;
   background-color: ${({ text }) => {
-    if (text === "reaction") {
+    if (text === "Reaction") {
       return "#fff6f5";
-    } else if (text === "memory") {
+    } else if (text === "Memory") {
       return "#fffbf2";
-    } else if (text === "verbal") {
+    } else if (text === "Verbal") {
       return "#f2fafa";
-    } else if (text === "visual") {
+    } else if (text === "Visual") {
       return "#f3f3fd";
     }
   }};
 
   color: ${({ text }) => {
-    if (text === "reaction") {
+    if (text === "Reaction") {
       return "#d37f82";
-    } else if (text === "memory") {
+    } else if (text === "Memory") {
       return "#e7cd9a";
-    } else if (text === "verbal") {
+    } else if (text === "Verbal") {
       return "#42b095";
-    } else if (text === "visual") {
+    } else if (text === "Visual") {
       return "#293399";
     }
+    return "#272d3d";
   }};
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const StyledText = styled.h3`
-  font-size: 400;
+  font-weight: 500;
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 1.25rem;
+  text-align: left;
+  margin-left: 10px;
 `;
 
 const StyledScore = styled(StyledText)`
   color: #272d3d;
+  font-size: 1rem;
+  margin-left: auto;
+  font-weight: 700;
 `;
 
-const Summary = ({ text, score }) => {
+const StyledImg = styled.img``;
+
+const Summary = ({ text, score, src }) => {
   return (
     <StyledSummary text={text}>
-      {score}/100
+      <StyledImg src={src} />
       <StyledText>{text}</StyledText>
+      <StyledScore>{score} / 100</StyledScore>
     </StyledSummary>
   );
 };
